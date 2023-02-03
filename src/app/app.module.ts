@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FlexComponent } from './layouting/layouting/flex.component';
+import { FlexComponent } from './layouting/flex/flex.component';
+import { GridComponent } from './layouting/grid/grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FlexComponent
+    FlexComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
