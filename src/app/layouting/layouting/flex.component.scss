@@ -1,0 +1,56 @@
+.screen {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+
+  .head {
+    background-color: blue;
+    height: 64px;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    width: 100%;
+
+    .left {
+      background-color: blueviolet;
+      flex: 1;
+    }
+
+    .right {
+      background-color: chartreuse;
+      flex: 1;
+    }
+
+    .body {
+      background-color: coral;
+      flex: 3;
+    }
+  }
+
+  .footer {
+    background-color: darkturquoise;
+    height: 64px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .content {
+      flex-flow: column;
+
+      .left {
+        order: 1;
+      }
+
+      .right {
+        order: 2;
+      }
+
+      .body {
+        order: 3;
+      }
+    }
+  }
+}
