@@ -1,0 +1,36 @@
+$my-button-color: blue;
+$my-button-pressed-color: gray;
+
+:host {
+  background-color: $my-button-color;
+  min-width: 150px;
+  max-width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  display: grid;
+  grid-template-areas: 'backspace-button button-text';
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  padding: 2px;
+
+  .backspace-button {
+    grid-area: backspace-button;
+  }
+
+  .button-text {
+    grid-area: button-text;
+  }
+}
+
+:host(.hover) {
+  border: 2px solid $my-button-color;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+:host(.pressed) {
+  font-weight: bold;
+  background-color: $my-button-pressed-color;
+  cursor: pointer;
+}

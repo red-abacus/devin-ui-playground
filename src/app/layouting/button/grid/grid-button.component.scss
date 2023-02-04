@@ -1,0 +1,55 @@
+:host {
+  .screen {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'left body right'
+    'footer footer footer';
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 64px 1fr 64px;
+
+    .head {
+      background-color: blue;
+      grid-area: header;
+    }
+
+    .left {
+      background-color: blueviolet;
+      grid-area: left;
+    }
+
+    .right {
+      background-color: chartreuse;
+      grid-area: right;
+    }
+
+    .body {
+      background-color: coral;
+      grid-area: body;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer {
+      background-color: darkturquoise;
+      grid-area: footer;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .screen {
+      grid-template-areas:
+        'header'
+        'left'
+        'right'
+        'body'
+        'footer';
+      grid-template-rows: 64px repeat(2, 1fr) 3fr 64px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
