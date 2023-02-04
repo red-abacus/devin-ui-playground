@@ -31,4 +31,9 @@ export class MyStateButtonComponent {
   onMouseUp(event: any) {
     this.myClass = "";
   }
+
+  @HostListener('click', ['$event'])
+  onClick(event: any) {
+    this.myEvent.emit();
+  }
 }
